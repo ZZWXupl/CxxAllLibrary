@@ -1,0 +1,5 @@
+#pragma once
+
+#pragma warning(disable:4668 4365 5045 4996 4459 4514 4235 4355 5204 4820 5220 4625 4626
+						5026 5027 4820 4335)
+#define _CRT_SECURE_NO_WARNINGS true
