@@ -5,11 +5,9 @@
 #pragma once
 #pragma warning(disable:4668 4365 5045 4996 4459 4514 4235 4355 5204 4820\
 5039 5220 4625 4626 5026 5027 4820 4335)
-#define _CRT_SECURE_NO_WARNINGS true
+#define _CRT_SECURE_NO_WARNINGS true //For MSVC++
 #if defined(__cplusplus)
-#if __cplusplus<201103L && (!defined(_MSC_VER))
-#error "unable to use this library in C++03 or ealier!"
-#elif __cplusplus>260000L
+#if __cplusplus>260000L
 #error "This program ONLY useable in C++26 or ealier!"
 #endif
 #if __cplusplus<230000 || defined(_MSC_VER)
@@ -66,6 +64,7 @@
 #include <iosfwd>
 #include <sstream>
 #include <streambuf>
+#if __cplusplus>=201103 || defined(_MSC_VER)
 #include <chrono>
 #include <initializer_list>
 #include <tuple>
@@ -90,9 +89,9 @@
 #include <mutex>
 #include <thread>
 #include <stdnoreturn.h>
-#if __cplusplus>201402L || defined(_MSC_VER)
+#if __cplusplus>201402L || defined(_MSC_VER) || _HAS_CXX14
 #include <shared_mutex>
-#if __cplusplus>201703L || defined(_MSC_VER)
+#if __cplusplus>201703L || defined(_MSC_VER) || _HAS_CXX17
 #include <any>
 #include <optional>
 #include <variant>
@@ -101,7 +100,7 @@
 #include <string_view>
 #include <execution>
 #include <filesystem>
-#if __cplusplus>202000||defined(_MSC_VER)
+#if __cplusplus>202000||defined(_MSC_VER) || _HAS_CXX20
 #include <format>
 #include <version>
 #include <compare>
@@ -111,7 +110,7 @@
 #include <numbers>
 #include <syncstream>
 #include <barrier>
-#if __cplusplus>230000||defined(_MSC_VER)
+#if __cplusplus>230000||defined(_MSC_VER) || _HAS_CXX23
 #ifndef _MSC_VER
 #include <stdfloat>
 #include <flat_map>
@@ -133,7 +132,8 @@
 #include <codecvt>
 #endif//C++17
 #endif//C++14
-#endif//C++11/C++
+#endif//C++11
+#endif//C++
 #if defined(_WIN32)||defined(_WIN64)
 #include <windows.h>
 #include <dos.h>
@@ -146,5 +146,11 @@
 #include <winefs.h>
 #include <winevt.h>
 #include <winerror.h>
+#include <winuser.rh>
+#include <commctrl.rh>
+#include <dde.rh>
+#include <winnt.rh>
+#include <dlgs.h>
+#include <winver.h>
 #endif//Windows
 //AllOfTheLibraries
