@@ -7,7 +7,7 @@
 5039 5220 4625 4626 5026 5027 4820 4335)
 #define _CRT_SECURE_NO_WARNINGS true //For MSVC++
 #if defined(__cplusplus)
-#if __cplusplus>260000L
+#if __cplusplus>=270000L
 #error "This program ONLY useable in C++26 or ealier!"
 #endif
 #if __cplusplus<230000 || defined(_MSC_VER)
