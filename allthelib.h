@@ -1,5 +1,5 @@
 /**
-* @file allsys.h
+* @file allthelib.h
 * This is a library that have all the standard library.
 */
 #pragma once
@@ -15,6 +15,19 @@
 #endif
 #ifndef _MSC_VER
 #include <threads.h>
+#endif
+#ifdef _MSC_VER
+namespace std {
+	template<typename _T>
+	_T __gcd(_T x, _T y) {
+		return (y == _T(NULL) ? x : libaddone::__gcd(y, x % y));
+	}
+	template<typename _T>
+	_T __lcm(_T x, _T y) {
+		return x * y / libaddone::__gcd(x, y);
+	}
+};
+//Additions to MSVC's G++ function of gcd and lcm in <numeric> header(nicknamed "private goods").
 #endif
 #include <bitset>
 #include <csetjmp>
@@ -64,7 +77,7 @@
 #include <iosfwd>
 #include <sstream>
 #include <streambuf>
-#if __cplusplus>=201103 || defined(_MSC_VER)
+#if __cplusplus>=201103L || defined(_MSC_VER) || _STL_LANG>=201103L
 #include <chrono>
 #include <initializer_list>
 #include <tuple>
@@ -89,9 +102,9 @@
 #include <mutex>
 #include <thread>
 #include <stdnoreturn.h>
-#if __cplusplus>201402L || defined(_MSC_VER) || _HAS_CXX14
+#if __cplusplus>201403L || defined(_MSC_VER) || _STL_LANG >= 201403L
 #include <shared_mutex>
-#if __cplusplus>201703L || defined(_MSC_VER) || _HAS_CXX17
+#if __cplusplus>201703L || defined(_MSC_VER) || _HAS_CXX17 || _STL_LANG >= 201703L
 #include <any>
 #include <optional>
 #include <variant>
@@ -100,7 +113,7 @@
 #include <string_view>
 #include <execution>
 #include <filesystem>
-#if __cplusplus>202000||defined(_MSC_VER) || _HAS_CXX20
+#if __cplusplus>=202003L||defined(_MSC_VER) || _HAS_CXX20 || _STL_LANG >= 202003L
 #include <format>
 #include <version>
 #include <compare>
@@ -110,7 +123,7 @@
 #include <numbers>
 #include <syncstream>
 #include <barrier>
-#if __cplusplus>230000||defined(_MSC_VER) || _HAS_CXX23
+#if __cplusplus >= 230000L ||defined(_MSC_VER) || _HAS_CXX23
 #ifndef _MSC_VER
 #include <stdfloat>
 #include <flat_map>
