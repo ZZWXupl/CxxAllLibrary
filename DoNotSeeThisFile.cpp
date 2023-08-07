@@ -1,0 +1,11 @@
+//If you cracked the secret, you will know me well......
+//secret will start at line 7
+//First info:Base __
+//Second info:64 32 58
+//Last info:No Enter in this secret
+/*
+2AKDZJ38mWVgE6GihposjyC6gbWfgkwpUaDvaCFbEMjZdWRvzLLoARta9tKAjKJt5qcLZUyxhySLyZZD2BeVEpZCXXDQfV8Jjc5qdinZ9aBBfhYJ1hyUybXkKUh2bYBmaw87WEYRnwo6RpDnBfbgRWaQgWEP33xFx8epAv
+ygoAnc5kWk8XkVjkqcV3uBkg1fUDEHnoR2gB3Pz6CFKxyDzDVmwEUZYSWbjH5iaqQoqvLoHUGKbV9oQxTB9rzPJ51diVPheXwkbD1EuoC5N9oud1i1a272iW1Yv4WCnXAsouvkTiDDcMXqNmBYe3RffjLBmCGFdBHv7cPh
+Dqs5hNxRbNcVb1xNZ4eYLzcW2kCEURBS9wqAXhnWrJh2hSK3mh2PaDHKaKTptvquUvYwtQ96qR85gRcvgynqmQd1Jj7oskBQ456DvW1yn6kJMzHgeXb9r955WRkJDHwwT35soci7GZg9fzgfqTb94iBmtrDzHA1eXe57wd
+yafBQC8NwVNM4wuDF5Chz7wDvGmwqhhoNvr2xC
+*/
