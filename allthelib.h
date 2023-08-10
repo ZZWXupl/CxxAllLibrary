@@ -138,7 +138,7 @@ namespace std {
 #endif//C++23 Pure
 #include <stacktrace>
 #include <spanstream>
-#if __cplusplus>260000
+#if __cplusplus>260000 || defined(_HAS_CXX26)
 #include <text_encoding>
 #include <rcu>
 #include <hazard_pointer>
